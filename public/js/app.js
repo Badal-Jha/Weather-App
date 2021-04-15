@@ -17,7 +17,8 @@ form.addEventListener("submit", (e) => {
     return;
   }
   //fetch data from http://localhost:3000/Weather?address=boston
-  fetch(`http://localhost:3000/Weather?address=${address}`)
+  //now as we depoy it on heroku remove local host address
+  fetch(`/Weather?address=${address}`)
     .then((res) => {
       if (res.status != 200) {
         massege1.appendChild(`<span>There is something wrong</span>`);
